@@ -1,0 +1,11 @@
+body {
+    @include flex-column(0px);
+    @include content-middle;
+    background-color: $cyan-4;
+}
+
+@media only screen and (min-width : 769px) and (min-height : 900px){
+    body {
+        margin: 75px;
+    }
+}

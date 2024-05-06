@@ -1,0 +1,321 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+* {
+  transition: 0.25s;
+}
+
+* {
+  font-family: "Space Mono";
+  font-weight: 700;
+}
+
+p, label {
+  font-size: 16px;
+}
+
+button, input {
+  font-size: 24px;
+}
+
+h1 {
+  font-size: 32px;
+  letter-spacing: -0.67px;
+}
+
+.calculator_display button {
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 769px) {
+  h1 {
+    font-size: 48px;
+    letter-spacing: -1px;
+  }
+}
+form .container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+}
+
+.tipBtnContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}
+
+.calculator_display .container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+@media only screen and (min-width: 769px) {
+  .tipBtnContainer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+button {
+  border: none;
+  border-radius: 5px;
+}
+
+.tipBtnContainer button {
+  color: white;
+  background-color: hsl(183, 100%, 15%);
+}
+.tipBtnContainer button:hover {
+  cursor: pointer;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(185, 41%, 84%);
+}
+.tipBtnContainer .active {
+  background-color: hsl(172, 67%, 45%);
+}
+.tipBtnContainer input {
+  text-align: center;
+}
+.tipBtnContainer input::-moz-placeholder {
+  color: hsl(186, 14%, 43%);
+}
+.tipBtnContainer input::placeholder {
+  color: hsl(186, 14%, 43%);
+}
+
+.calculator_display .active {
+  background-color: hsl(172, 67%, 45%);
+}
+.calculator_display button {
+  height: 48px;
+  color: hsl(183, 100%, 15%);
+  background-color: #0D686D;
+}
+
+.calculator_display .active:hover {
+  cursor: pointer;
+  background-color: hsl(185, 41%, 84%);
+}
+
+.calculator_cal form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+label {
+  color: hsl(186, 14%, 43%);
+}
+
+input {
+  width: 100%;
+  text-align: end;
+  padding-block: 6px;
+  padding-inline: 0px;
+  border: none;
+  border-radius: 5px;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(189, 41%, 97%);
+  background-size: 12px auto;
+  background-position: 17px center;
+  background-repeat: no-repeat;
+}
+
+#bill, #people {
+  padding-inline: 16px;
+}
+
+input:focus {
+  outline-color: hsl(172, 67%, 45%);
+}
+
+input::-moz-placeholder {
+  color: hsl(184, 14%, 56%);
+}
+
+input::placeholder {
+  color: hsl(184, 14%, 56%);
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+}
+
+.invalid, .invalid:focus {
+  outline: 2px solid #E17052;
+}
+
+#bill {
+  background-image: url("../images/icon-dollar.svg");
+}
+
+#people {
+  background-image: url("../images/icon-person.svg");
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+}
+.label .err {
+  display: none;
+  color: #E17052;
+}
+
+@media only screen and (min-width: 769px) {
+  .calculator_cal {
+    width: 380px;
+  }
+}
+.calculator_display {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  padding: 24px;
+  justify-content: space-between;
+  border-radius: 15px;
+  background-color: hsl(183, 100%, 15%);
+}
+.calculator_display .calculated {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.calculator_display .calculated h1 {
+  color: hsl(172, 67%, 45%);
+}
+.calculator_display .calculated p {
+  color: white;
+}
+.calculator_display .calculated p:after {
+  content: "/ person";
+  color: hsl(184, 14%, 56%);
+}
+
+@media only screen and (min-width: 769px) {
+  .calculator_display {
+    padding: 40px;
+    width: 380px;
+  }
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 144px;
+}
+
+@media only screen and (min-width: 769px) {
+  header {
+    height: 230px;
+  }
+}
+.calculator {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  height: 100%;
+  border-radius: 25px 25px 0 0;
+  padding: 32px;
+  background-color: white;
+}
+
+@media only screen and (min-width: 769px) {
+  .calculator {
+    flex-direction: row;
+    -moz-column-gap: 48px;
+         column-gap: 48px;
+    max-width: 920px;
+    max-height: 480px;
+    border-radius: 25px;
+    box-shadow: 0px 5px 20px 0px hsla(0, 0%, 59%, 0.15);
+  }
+}
+footer {
+  display: none;
+}
+
+@media only screen and (min-height: 900px) {
+  footer {
+    display: block;
+    position: absolute;
+    text-align: center;
+    bottom: 15%;
+    color: hsl(183, 100%, 15%);
+  }
+  footer a {
+    color: hsl(186, 14%, 43%);
+  }
+}
+body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(185, 41%, 84%);
+}
+
+@media only screen and (min-width: 769px) and (min-height: 900px) {
+  body {
+    margin: 75px;
+  }
+}/*# sourceMappingURL=main.css.map */

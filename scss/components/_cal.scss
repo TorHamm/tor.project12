@@ -1,0 +1,66 @@
+.calculator_cal form{
+    @include flex-column(32px);
+}
+
+label {
+    color: $cyan-2;
+}
+
+input {
+    width: 100%;
+    text-align: end;
+    padding-block: 6px;
+    padding-inline: 0px;
+    border: none;
+    border-radius: $br-5;
+    color: $cyan-1;
+    background-color: $cyan-5;
+    background-size: 12px auto;
+    background-position: 17px center;
+    background-repeat: no-repeat;
+}
+
+#bill , #people{
+    padding-inline: 16px;
+}
+
+input:focus {
+    outline-color: $cyan;
+}
+
+input::placeholder {
+    color: $cyan-3;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+.invalid , .invalid:focus {
+    outline: 2px solid #E17052;
+}
+
+#bill {
+    background-image: url('../images/icon-dollar.svg');
+}
+
+#people {
+    background-image: url('../images/icon-person.svg');
+}
+
+.label  {
+    display: flex;
+    justify-content: space-between;
+    .err {
+        display: none;
+        color: #E17052;
+    }
+}
+
+@media only screen and (min-width :769px) {
+    .calculator_cal {
+        width: 380px;
+    }
+}

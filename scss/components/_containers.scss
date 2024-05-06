@@ -1,0 +1,25 @@
+form .container {
+    @include flex-column(6px)
+}
+
+.tipBtnContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+}
+
+.calculator_display{
+    .container {
+        @include flex-column(20px);
+    }
+}
+
+@media only screen and (min-width:769px) {
+    .tipBtnContainer {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    
+}

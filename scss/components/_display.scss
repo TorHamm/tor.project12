@@ -1,0 +1,29 @@
+.calculator_display{
+    @include flex-column(32px);
+    padding: 24px;
+    justify-content: space-between;
+    border-radius: $br-15;
+    background-color: $cyan-1;
+    .calculated {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h1 {
+            color: $cyan;
+        }
+        p {
+            color: white;
+        }
+        p:after {
+            content: '/ person';
+            color: $cyan-3;
+        }
+    }
+}
+
+@media only screen and (min-width :769px) {
+    .calculator_display {
+        padding: 40px;
+        width: 380px;
+    }
+}

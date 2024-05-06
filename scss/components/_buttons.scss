@@ -1,0 +1,41 @@
+button {
+    border: none;
+    border-radius: $br-5;
+}
+
+.tipBtnContainer {
+    button {
+        color: white;
+        background-color: $cyan-1;
+    }
+    button:hover {
+        cursor: pointer;
+        color: $cyan-1;
+        background-color: $cyan-4;
+    }
+    .active {
+        background-color: $cyan;
+    }
+    input {
+        text-align: center;
+    }
+    input::placeholder {
+        color: $cyan-2;
+    }
+}
+
+.calculator_display {
+    .active {
+        background-color: $cyan;
+    }
+    button{
+        height: 48px;
+        color: $cyan-1;
+        background-color: #0D686D;
+    }
+}
+
+.calculator_display .active:hover {
+    cursor: pointer;
+    background-color: $cyan-4;
+}

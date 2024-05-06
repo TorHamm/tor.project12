@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    font-family: 'Space Mono';
+    font-weight: 700;
+}
+
+p , label {
+    font-size: 16px;
+}
+
+button , input {
+    font-size: 24px;
+}
+
+h1 {
+    font-size: 32px;
+    letter-spacing: -0.67px;
+}
+
+.calculator_display button {
+    font-size: 20px;
+}
+
+@media only screen and (min-width:769px) {
+    h1 {
+        font-size: 48px;
+        letter-spacing: -1px;
+    }
+}

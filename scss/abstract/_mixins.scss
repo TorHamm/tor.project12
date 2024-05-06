@@ -1,0 +1,11 @@
+@mixin flex-column ($gap) {
+    display: flex;
+    flex-direction: column;
+    row-gap: $gap;
+}
+
+@mixin content-middle() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

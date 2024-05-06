@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="scss/main.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <script defer src="scripts/app.js"></script>
+</head>
+<body>
+
+  <header>
+    <img src="images/logo.svg" alt="logo">
+  </header>
+
+  <main class="calculator">
+    <div class="calculator_cal">
+      <form>
+
+        <div class="container">
+          <label for="bill">Bill</label>
+          <input type="number" id="bill" name="billCost" placeholder="0">
+        </div>
+
+        <div class="container">
+          <label for="tip">Select Tip %</label>
+          <div class="tipBtnContainer">
+            <button type="button" value="5">5%</button>
+            <button type="button" value="10">10%</button>
+            <button type="button" value="15">15%</button>
+            <button type="button" value="25">25%</button>
+            <button type="button" value="50">50%</button>
+            <input type="number" id="tip" name="customTip" placeholder="Custom">
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="label">
+            <label for="people">Number of People</label>
+            <label class="err" id="err">Can't be zero</label>
+          </div>
+          <input type="number" id="people" name="peopleAmout" placeholder="0">
+        </div>
+
+      </form>
+    </div>
+    <div class="calculator_display">
+      <div class="container">
+        <div class="calculated Tip">
+          <p>Tip Amount<br></p>
+          <h1 id="tipPerPerson">$0.00</h1>
+        </div>
+        <div class="calculated Total">
+          <p>Total<br></p>
+          <h1 id="totalPerPerson">$0.00</h1>
+        </div>
+      </div>
+      <button type="button" id="resetButton" disabled>RESET</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>Look good on desktop and mobile phone resolution :D</p>
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/TorHamm">Klakawee Sukuntaporn</a>.</p>
+  </footer>
+  
+</body>
+</html>
